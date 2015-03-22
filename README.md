@@ -1,10 +1,13 @@
 # AspNetInterviewTest
 
 פרוייקט דוגמא עבור ראיון עבודה
+An example project to test .net Data structure.
 
 ## תיאור הבעיה The Problem
 The System Recevices an array of integars, each int represent a status code of an event. the events are numbered between 1 - 100 but the size of the array is about |10000|.
+
 The Businness logic class has one function called Next
+
 Next function has this requirements
 1. get a postion in the array
 2. return the next postion of the value of the item( the next  postion where the number at)
