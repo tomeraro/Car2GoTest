@@ -49,3 +49,7 @@ C:\GitHub\AspNetInterviewTest\ASPTest\bin\System.Web.Http.WebHost.xml
 C:\GitHub\AspNetInterviewTest\ASPTest\obj\Debug\ASPTest.csprojResolveAssemblyReference.cache
 C:\GitHub\AspNetInterviewTest\ASPTest\obj\Debug\ASPTest.dll
 C:\GitHub\AspNetInterviewTest\ASPTest\obj\Debug\ASPTest.pdb
+C:\GitHub\AspNetInterviewTest\ASPTest\bin\EntityFramework.dll
+C:\GitHub\AspNetInterviewTest\ASPTest\bin\EntityFramework.SqlServer.dll
+C:\GitHub\AspNetInterviewTest\ASPTest\bin\EntityFramework.xml
+C:\GitHub\AspNetInterviewTest\ASPTest\bin\EntityFramework.SqlServer.xml
