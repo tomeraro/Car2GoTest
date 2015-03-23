@@ -38,7 +38,7 @@ var arr = [ 1,2,4,1,2,3,5,6,7,2,2,9,9,8,3,2,1,2,3];
 // the number are from 1- 10
 
 
-* examples 
+examples 
 * getNewPostion(0) return 3
 * getNewPostion(3) return 16
 * getNewPostion(1) return 5
