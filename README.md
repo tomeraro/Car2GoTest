@@ -34,15 +34,15 @@ Next function has this requirements
 ## a simple check
 
 
-var arr = [ 1,2,4,1,2,3,5,6,7,2,2,9,9,8,3,2,1,2,3];
+var arr = [ 1,2,8,1,2,3,5,6,7,2,2,9,9,9,3,2,1,2,3];
 // the number are from 1- 10
 
 
 examples 
-* getNewPostion(0) return 3
-* getNewPostion(3) return 16
-* getNewPostion(1) return 5
-* getNewPostion(3) return ?
+* getNewPostion(0) return 3   (the number is 1)
+* getNewPostion(3) return 16  (the number is  1)
+* getNewPostion(1) return 4   (the number is 2)
+* getNewPostion(2) return ?
 
 # Stage 2 Add DB with Entity Framework
 
