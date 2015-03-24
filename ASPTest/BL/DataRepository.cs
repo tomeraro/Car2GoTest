@@ -61,9 +61,9 @@ namespace ASPTest.BL
         /// <param name="Items"></param>
         void SaveItems(List<int> Items);
 
-        Tuple<int, int> GetItemsAccroding(DateTime Date);
+        List<Tuple<int, int>> GetItemsAccroding(DateTime Date);
 
-        Tuple<int, int> GetItemsAndCount();
+        List<Tuple<int, int>> GetItemsAndCount();
 
     }
 }
