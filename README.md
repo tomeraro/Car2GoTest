@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/giladDAN/AspNetInterviewTest.png?label=ready&title=Ready)](https://waffle.io/giladDAN/AspNetInterviewTest)
 # AspNetInterviewTest
 
 פרוייקט דוגמא עבור ראיון עבודה
