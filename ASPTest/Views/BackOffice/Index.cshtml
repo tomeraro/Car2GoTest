@@ -1,0 +1,38 @@
+﻿@model  ASPTest.Models.BackOfficeModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h1> Items And Count </h1>
+
+<table>
+    <tr>
+        <td class="header-td">Number</td>
+        <td class="header-td">Count</td>
+    </tr>
+
+    @foreach (var x in Model.ItemsAndCount)
+    {
+        <tr>
+            <td>@x.Item1</td>
+            <td>@x.Item2</td>
+        </tr>
+    }
+</table>
+
+<br />
+<h1> Items And Count According Date </h1>
+<table>
+    <tr>
+        <td class="header-td">Number</td>
+        <td class="header-td">Count</td>
+    </tr>
+    @foreach (var x in Model.ItemsAndCountFromDate)
+    {
+        <tr>
+            <td>@x.Item1</td>
+            <td>@x.Item2</td>
+        </tr>
+    }
+</table>

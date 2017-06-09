@@ -39,7 +39,35 @@ namespace ASPTest.BL
         /// <returns></returns>
         public List<Tuple<int, int>> GetItemsAccroding(DateTime Date)
         {
-            throw new NotImplementedException();
+            Dictionary<int, int> itemsAndCountFromDateDic = new Dictionary<int, int>(); //works with dictionary because its easy to add the numbers with counter is 0 and than convert to List<tuple> 
+            List<Tuple<int, int>> itemsAndCountFromDate = new List<Tuple<int, int>>();
+            try
+            {
+                using (Model context = new Model())
+                {
+                    var list = context.SelectedItems.Where(x=> x.ShowDate >= Date).GroupBy(x => x.Number).Select(p => new { number = p.Key, count = p.Count() }).ToList();
+                    foreach (var item in list)
+                    {
+                        itemsAndCountFromDateDic.Add(item.number, item.count);
+                    }
+
+                    for(int i=0; i<100; i++)
+                    {
+                        if (!itemsAndCountFromDateDic.ContainsKey(i))
+                        {
+                            itemsAndCountFromDateDic.Add(i, 0);
+                        }
+                    }
+
+                    foreach (var item in itemsAndCountFromDateDic)
+                    {
+                        itemsAndCountFromDate.Add(new Tuple<int, int>(item.Key, item.Value));
+                    }
+                }
+            }
+            catch (Exception exp) { }
+
+            return itemsAndCountFromDate.OrderByDescending(x => x.Item2).ToList();
         }
 
         /// <summary>
@@ -49,7 +77,34 @@ namespace ASPTest.BL
         /// <returns></returns>
         public List<Tuple<int, int>> GetItemsAndCount()
         {
-            throw new NotImplementedException();
+            Dictionary<int, int> itemsAndCountDic = new Dictionary<int, int>(); //works with dictionary because its easy to add the numbers with counter is 0 and than convert to List<tuple> 
+            List<Tuple<int, int>> itemsAndCount = new List<Tuple<int, int>>();
+            try
+            {
+                using (Model context = new Model())
+                {
+                    var list = context.SelectedItems.GroupBy(x => x.Number).Select(p => new { number = p.Key, count = p.Count() }).ToList();
+                    foreach(var item in list)
+                    {
+                        itemsAndCountDic.Add(item.number, item.count);
+                    }
+
+                    for (int i = 0; i < 100; i++)
+                    {
+                        if (!itemsAndCountDic.ContainsKey(i))
+                        {
+                            itemsAndCountDic.Add(i, 0);
+                        }
+                    }
+
+                    foreach (var item in itemsAndCountDic)
+                    {
+                        itemsAndCount.Add(new Tuple<int, int>(item.Key, item.Value));
+                    }
+                }
+            }
+            catch (Exception exp){}
+            return itemsAndCount.OrderByDescending(x => x.Item2).ToList();
         }
     }
 

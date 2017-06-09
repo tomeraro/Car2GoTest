@@ -11,6 +11,8 @@ namespace ASPTest.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            if (Session["ItemsDictionary"] != null)
+                Session["ItemsDictionary"] = null;
             return View();
         }
     }

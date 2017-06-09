@@ -196,3 +196,9 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+/*** BackOffice CSS ***/
+.header-td {
+    width: 150px;
+    font-weight: bold;
+}
